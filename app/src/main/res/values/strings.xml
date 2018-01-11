@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Compartamos Viaje</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Strings for Acerca De-->
+    <string name="raul">Raúl De León</string>
+    <string name="david">David Quintero</string>
+    <string name="efrain">Efraín Lira</string>
+    <string name="dulce">Dulce Paz</string>
+    <string name="fernando">Fernando Veladiz</string>
+    <string name="bryan">Bryan Rodríguez</string>
+    <string name="copyright">© Copyright 2018 Ganlen Systems</string>
+    <string name="website">ganlensystems.github.io</string>
+    <string name="email">ganlensystems@icloud.com</string>
+    <string name="phone_number">5527301215</string>
+</resources>
