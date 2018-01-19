@@ -29,6 +29,10 @@
             android:icon="@drawable/ic_menu_manage"
             android:title="Configuración" />
         <item
+            android:id="@+id/nav_ruleta"
+            android:icon="@drawable/ic_ruleta"
+            android:title="Ruleta"/>
+        <item
             android:id="@+id/nav_acerca"
             android:icon="@drawable/ic_acerca_de"
             android:title="Acerca De"/>

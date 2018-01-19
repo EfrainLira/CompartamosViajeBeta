@@ -1,5 +1,6 @@
 package com.ganlen.compartamosviaje;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -56,13 +57,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_negocios) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new NegociosFragment()).commit();
         } else if (id == R.id.nav_promociones) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor, new PromocionesFragment()).commit();
+            //fragmentManager.beginTransaction().replace(R.id.contenedor, new PromocionesFragment()).commit();
+            Intent promo = new Intent(MainActivity.this, Image_List.class);
+            startActivity(promo);
         } else if (id == R.id.nav_pagos) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new PagosFragment()).commit();
         } else if (id == R.id.nav_config) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new ConfiguracionFragment()).commit();
         } else if (id == R.id.nav_acerca) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new AcercaDeFragment()).commit();
+        } else if (id == R.id.nav_ruleta){
+            Intent ruleta = new Intent(MainActivity.this, RuletaActivity.class);
+            startActivity(ruleta);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
