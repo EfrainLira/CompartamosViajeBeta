@@ -16,4 +16,16 @@
     <string name="website">ganlensystems.github.io</string>
     <string name="email">ganlensystems@icloud.com</string>
     <string name="phone_number">5527301215</string>
+
+    <!--Strings for Ruleta-->
+    <string-array name="predefined">
+        <item>4 Hamburguesas con queso + 4 papas Kids por $109</item>
+        <item>Pizzas a $99 y Cerveza a $54</item>
+        <item>2x1 en rollos a partir de las 5pm</item>
+        <item>Whopper Jr + Papas + Refresco + Sunday Jr</item>
+        <item>2 o 4 crepas de tres o más ingredientes por $300</item>
+        <item>Para 2 o 4 entrada, principal, postre y botella de vino</item>
+        <item>Steakburgers dobles para 2 personas con patatas fritas</item>
+    </string-array>
+    <string name="menu_config">Configurar</string>
 </resources>
