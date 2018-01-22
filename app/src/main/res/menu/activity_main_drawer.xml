@@ -7,38 +7,38 @@
         <item
             android:id="@+id/nav_perfil"
             android:icon="@drawable/ic_perfil"
-            android:title="Perfil" />
+            android:title="@string/perfil" />
         <item
             android:id="@+id/nav_noticias"
             android:icon="@drawable/ic_news"
-            android:title="Noticias" />
+            android:title="@string/noti" />
         <item
             android:id="@+id/nav_negocios"
             android:icon="@drawable/ic_negocio"
-            android:title="Negocios" />
+            android:title="@string/negocios" />
         <item
             android:id="@+id/nav_promociones"
             android:icon="@drawable/ic_money"
-            android:title="Promociones" />
+            android:title="@string/promociones" />
         <item
             android:id="@+id/nav_pagos"
             android:icon="@drawable/ic_pago"
-            android:title="Pagos" />
-        <item
-            android:id="@+id/nav_config"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Configuración" />
+            android:title="@string/pagos" />
         <item
             android:id="@+id/nav_ruleta"
             android:icon="@drawable/ic_ruleta"
-            android:title="Ruleta"/>
+            android:title="@string/ruleta"/>
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/compartir" />
         <item
             android:id="@+id/nav_acerca"
             android:icon="@drawable/ic_acerca_de"
-            android:title="Acerca De"/>
+            android:title="@string/acerca"/>
         <item
             android:id="@+id/nav_cerrarSesion"
             android:icon="@drawable/ic_cerrar"
-            android:title="Cerrar Sesión"/>
+            android:title="@string/cerrar"/>
     </group>
 </menu>

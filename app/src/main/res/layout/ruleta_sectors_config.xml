@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<ListView android:id="@+id/android:list"
+	    android:layout_alignParentTop="true"
+	    android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/buttons" />
+
+	<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/buttons"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:text="Agregar"
+			android:id="@+id/button_add"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+
+		<Button
+			android:text="Guardar"
+			android:id="@+id/button_done"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+
+		<Button
+			android:text="Reiniciar"
+			android:id="@+id/reset"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+	</LinearLayout>
+</RelativeLayout>

@@ -10,6 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.ganlen.compartamosviaje.lugares.Lugares_List;
+import com.ganlen.compartamosviaje.ruleta_file.RuletaActivity;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
@@ -57,18 +60,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_negocios) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new NegociosFragment()).commit();
         } else if (id == R.id.nav_promociones) {
-            //fragmentManager.beginTransaction().replace(R.id.contenedor, new PromocionesFragment()).commit();
-            Intent promo = new Intent(MainActivity.this, Image_List.class);
+            Intent promo = new Intent(MainActivity.this, Lugares_List.class);
             startActivity(promo);
         } else if (id == R.id.nav_pagos) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new PagosFragment()).commit();
-        } else if (id == R.id.nav_config) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor, new ConfiguracionFragment()).commit();
         } else if (id == R.id.nav_acerca) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new AcercaDeFragment()).commit();
         } else if (id == R.id.nav_ruleta){
             Intent ruleta = new Intent(MainActivity.this, RuletaActivity.class);
             startActivity(ruleta);
+        } else if (id == R.id.nav_share){
+            //Sustituir el link más adelante por la app real :v
+            String appLink = "https://play.google.com/store/apps/details?id=com.Slack&hl=es";
+            Intent share = new Intent(Intent.ACTION_SEND);
+            share.setType("text/plain");
+            share.putExtra(Intent.EXTRA_SUBJECT, "Compartamos Viaje");
+            share.putExtra(Intent.EXTRA_TEXT, "Te invito a descargar una nueva app para Explorar el mundo contigo \n" + appLink);
+            startActivity(Intent.createChooser(share, "Compartir"));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

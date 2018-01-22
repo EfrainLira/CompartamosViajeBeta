@@ -2,24 +2,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
+                android:layout_marginTop="60dp"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:layout_margin="8dp"
                 android:background="@android:color/black"
                 android:scaleType="centerInside"
                 android:src="@drawable/logo_ganlen" />
             <TextView
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -95,16 +92,6 @@
                 android:layout_marginBottom="8dp"
                 android:autoLink="email"/>
             <TextView
-                android:text="@string/phone_number"
-                android:id="@+id/mobile_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp"
-                android:autoLink="phone"/>
-            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -113,5 +100,4 @@
                 android:textAlignment="center"
                 android:textSize="16sp"/>
         </LinearLayout>
-    </ScrollView>
 </FrameLayout>
