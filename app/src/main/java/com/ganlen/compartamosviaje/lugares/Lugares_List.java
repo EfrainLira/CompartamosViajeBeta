@@ -73,6 +73,7 @@ public class Lugares_List extends AppCompatActivity {
             public void onClick(View view) {
                 Intent promo = new Intent(Lugares_List.this, Lugares_List.class);
                 startActivity(promo);
+                finish();
             }
         });
 
@@ -81,6 +82,7 @@ public class Lugares_List extends AppCompatActivity {
             public void onClick(View view) {
                 Intent promo = new Intent(Lugares_List.this, Productos_List.class);
                 startActivity(promo);
+                finish();
             }
         });
 
@@ -89,6 +91,7 @@ public class Lugares_List extends AppCompatActivity {
             public void onClick(View view) {
                 Intent promo = new Intent(Lugares_List.this, Servicios_List.class);
                 startActivity(promo);
+                finish();
             }
         });
     }

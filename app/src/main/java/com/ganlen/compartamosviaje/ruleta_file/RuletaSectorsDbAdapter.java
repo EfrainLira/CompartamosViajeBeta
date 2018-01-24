@@ -26,7 +26,7 @@ public class RuletaSectorsDbAdapter {
 
     private static final String DATABASE_NAME = "fortunewheeldatabase";
     private static final String DATABASE_TABLE = "sectors";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     private final Context mCtx;
     

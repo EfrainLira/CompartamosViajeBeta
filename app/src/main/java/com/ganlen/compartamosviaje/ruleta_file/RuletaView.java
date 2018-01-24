@@ -216,7 +216,6 @@ public class RuletaView extends SurfaceView implements SurfaceHolder.Callback {
 		} else {
 			Resources res = getResources();
 			text = ("Vamos, gira un poco más fuerte");
-			//res.getString(R.string.stronger)
 		}
 		Toast toast = Toast.makeText(mContext, text, Toast.LENGTH_LONG);
 		toast.show();

@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.ganlen.compartamosviaje.lugares.Lugares_List;
+import com.ganlen.compartamosviaje.perfil.Perfil_List;
 import com.ganlen.compartamosviaje.ruleta_file.RuletaActivity;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.contenedor, new PerfilFragment()).commit();
+        fragmentManager.beginTransaction().replace(R.id.contenedor, new NoticiasFragment()).commit();
     }
 
     @Override
@@ -54,7 +55,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
 
         if (id == R.id.nav_perfil) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor, new PerfilFragment()).commit();
+            Intent per = new Intent(MainActivity.this, Perfil_List.class);
+            startActivity(per);
         } else if (id == R.id.nav_noticias) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new NoticiasFragment()).commit();
         } else if (id == R.id.nav_negocios) {
@@ -78,7 +80,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             share.putExtra(Intent.EXTRA_TEXT, "Te invito a descargar una nueva app para Explorar el mundo contigo \n" + appLink);
             startActivity(Intent.createChooser(share, "Compartir"));
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

@@ -3,15 +3,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary">
 
     <TextView
         android:layout_width="fill_parent"
-        android:text="@string/pregunta"
+        android:layout_height="40sp"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_height="40sp"
-        android:textStyle="bold" />
+        android:text="@string/pregunta"
+        android:textColor="@color/colorBlanco"
+        android:textSize="20sp"
+        android:textStyle="normal|bold" />
 
     <com.ganlen.compartamosviaje.ruleta_file.RuletaView
         android:id="@+id/rouletteView"

@@ -39,5 +39,9 @@
             android:name=".productos.Productos_List"
             android:label="@string/title_productos"
             android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".perfil.Perfil_List"
+            android:label="@string/title_per"
+            android:parentActivityName=".MainActivity"/>
     </application>
 </manifest>

@@ -10,9 +10,10 @@
     <string name="title_lugares">Lugares</string>
     <string name="title_productos">Productos</string>
     <string name="title_servicios">Servicios</string>
+    <string name="title_per">Perfil</string>
 
     <!--Strings for MainDrawer-->
-    <string name="perfil">Perfil</string>
+    <string name="perfil">Mi Perfil</string>
     <string name="noti">Noticias</string>
     <string name="negocios">Negocios</string>
     <string name="promociones">Promociones</string>
@@ -21,6 +22,12 @@
     <string name="compartir">Compartir</string>
     <string name="acerca">Acerca De</string>
     <string name="cerrar">Cerrar Sesión</string>
+
+    <!--Strings for Perfil-->
+    <string name="name">Helena López</string>
+    <string name="address">Condesa #298</string>
+    <string name="from">CDMX</string>
+    <string name="compras">Mis compras</string>
 
     <!--Strings for Acerca De-->
     <string name="raul">Raúl De León</string>
