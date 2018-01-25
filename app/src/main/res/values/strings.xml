@@ -11,6 +11,7 @@
     <string name="title_productos">Productos</string>
     <string name="title_servicios">Servicios</string>
     <string name="title_per">Perfil</string>
+    <string name="title_clima">Clima</string>
 
     <!--Strings for MainDrawer-->
     <string name="perfil">Mi Perfil</string>
@@ -22,6 +23,7 @@
     <string name="compartir">Compartir</string>
     <string name="acerca">Acerca De</string>
     <string name="cerrar">Cerrar Sesión</string>
+    <string name="clima">Clima</string>
 
     <!--Strings for Perfil-->
     <string name="name">Helena López</string>
@@ -39,6 +41,12 @@
     <string name="copyright">© Copyright 2018 Ganlen Systems</string>
     <string name="website">ganlensystems.github.io</string>
     <string name="email">ganlensystems@icloud.com</string>
+    <string name="obj_title">Nuestro Objetivo</string>
+    <string name="team_title">Nuestro Equipo</string>
+    <string name="web_title">Visítanos en</string>
+    <string name="obj_text">Facilitar la vida de las personas en todas las industrias mediante innovadores productos de
+        Cloud Computing de alta calidad para así también reducir la brecha tecnológica en los Países de América Latina
+        y países de tercer mundo.</string>
 
     <!--Strings for Ruleta-->
     <string name="pregunta">¿Qué se te antoja hoy?</string>

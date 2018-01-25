@@ -9,6 +9,10 @@
             android:icon="@drawable/ic_perfil"
             android:title="@string/perfil" />
         <item
+            android:id="@+id/nav_clima"
+            android:icon="@drawable/ic_clima"
+            android:title="@string/clima" />
+        <item
             android:id="@+id/nav_noticias"
             android:icon="@drawable/ic_news"
             android:title="@string/noti" />

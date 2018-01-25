@@ -10,8 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.ganlen.compartamosviaje.lugares.Lugares_List;
-import com.ganlen.compartamosviaje.perfil.Perfil_List;
 import com.ganlen.compartamosviaje.ruleta_file.RuletaActivity;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -71,6 +69,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_ruleta){
             Intent ruleta = new Intent(MainActivity.this, RuletaActivity.class);
             startActivity(ruleta);
+        } else if (id == R.id.nav_clima){
+            Intent clima = new Intent(MainActivity.this, ClimaActivity.class);
+            startActivity(clima);
         } else if (id == R.id.nav_share){
             //Sustituir el link más adelante por la app real :v
             String appLink = "https://play.google.com/store/apps/details?id=com.Slack&hl=es";

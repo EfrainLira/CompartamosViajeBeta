@@ -2,10 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ganlen.compartamosviaje">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -20,28 +24,33 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".ruleta_file.RuletaActivity"
             android:label="@string/title_ruleta"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".lugares.Lugares_List"
+            android:name=".Lugares_List"
             android:label="@string/title_lugares"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".servicios.Servicios_List"
+            android:name=".Servicios_List"
             android:label="@string/title_servicios"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".productos.Productos_List"
+            android:name=".Productos_List"
             android:label="@string/title_productos"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".perfil.Perfil_List"
+            android:name=".Perfil_List"
             android:label="@string/title_per"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ClimaActivity"
+            android:label="@string/title_clima"
+            android:parentActivityName=".MainActivity" />
     </application>
 </manifest>

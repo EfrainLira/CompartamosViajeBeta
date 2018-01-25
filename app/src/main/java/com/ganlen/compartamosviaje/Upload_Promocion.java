@@ -1,6 +1,6 @@
-package com.ganlen.compartamosviaje.servicios;
+package com.ganlen.compartamosviaje;
 
-public class ServiciosUpload {
+public class Upload_Promocion {
     public String nombre;
     public String url;
 
@@ -12,10 +12,10 @@ public class ServiciosUpload {
         return url;
     }
 
-    public ServiciosUpload(String nombre, String url) {
+    public Upload_Promocion(String nombre, String url) {
         this.nombre = nombre;
         this.url = url;
     }
 
-    public ServiciosUpload(){}
+    public Upload_Promocion(){}
 }

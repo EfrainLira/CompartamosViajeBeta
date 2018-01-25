@@ -1,4 +1,4 @@
-package com.ganlen.compartamosviaje.lugares;
+package com.ganlen.compartamosviaje;
 
 import android.app.Activity;
 import android.support.annotation.LayoutRes;
@@ -11,16 +11,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
-import com.ganlen.compartamosviaje.R;
 
 import java.util.List;
 
-public class LugaresListAdapter extends ArrayAdapter<LugaresUpload> {
+public class ListAdapter_Promocion extends ArrayAdapter<Upload_Promocion> {
     private Activity context;
     private int resource;
-    private List<LugaresUpload> listImage;
+    private List<Upload_Promocion> listImage;
 
-    public LugaresListAdapter(@NonNull Activity context, @LayoutRes int resource, @NonNull List<LugaresUpload> objects) {
+    public ListAdapter_Promocion(@NonNull Activity context, @LayoutRes int resource, @NonNull List<Upload_Promocion> objects) {
         super(context, resource, objects);
         this.context = context;
         this.resource = resource;

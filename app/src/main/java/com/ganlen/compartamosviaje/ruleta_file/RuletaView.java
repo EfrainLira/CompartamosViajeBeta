@@ -185,8 +185,8 @@ public class RuletaView extends SurfaceView implements SurfaceHolder.Callback {
 			canvas.drawLine(mCenterX, mCenterY, myPoint.x, myPoint.y, mPaint);
 		}
 		mPaint.setColor(Color.WHITE);
-		mPaint.setStrokeWidth(mStroke * 2);
-		canvas.drawLine(mCenterX + mRadius - FRAME * 2, mCenterY, mCenterX
+		mPaint.setStrokeWidth(mStroke * 15);
+		canvas.drawLine(mCenterX + mRadius - FRAME * 15, mCenterY, mCenterX
 				+ mRadius + FRAME, mCenterY, mPaint);
 		mPaint.setStrokeWidth(mStroke);
 	}

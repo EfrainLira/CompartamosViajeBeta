@@ -29,22 +29,4 @@ public class RuletaActivity extends Activity {
         super.onRestoreInstanceState(savedInstanceState);
         mRouletteView.updateSectors();
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        menu.add(0, CONFIG_ID, 0, R.string.menu_config);
-        return true;
-    }
-
-    @Override
-    public boolean onMenuItemSelected(int featureId, MenuItem item) {
-        switch (item.getItemId()) {
-            case CONFIG_ID:
-                Intent i = new Intent(this, RuletaSectorsConfig.class);
-                startActivity(i);
-                return true;
-        }
-        return super.onMenuItemSelected(featureId, item);
-    }
 }
