@@ -25,6 +25,10 @@
     <string name="cerrar">Cerrar Sesión</string>
     <string name="clima">Clima</string>
 
+    <!--Strings for Nav_Header_Main-->
+    <string name="saludo">Bienvenido</string>
+    <string name="correo">ganlensystems@icloud.com</string>
+
     <!--Strings for Perfil-->
     <string name="name">Helena López</string>
     <string name="address">Condesa #298</string>
@@ -59,5 +63,4 @@
         <item>Para 2 o 4 entrada, principal, postre y botella de vino</item>
         <item>Steakburgers dobles para 2 personas con patatas fritas</item>
     </string-array>
-    <string name="menu_config">Configurar</string>
 </resources>

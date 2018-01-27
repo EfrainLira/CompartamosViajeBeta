@@ -32,25 +32,5 @@
             android:name=".ruleta_file.RuletaActivity"
             android:label="@string/title_ruleta"
             android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Lugares_List"
-            android:label="@string/title_lugares"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Servicios_List"
-            android:label="@string/title_servicios"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Productos_List"
-            android:label="@string/title_productos"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Perfil_List"
-            android:label="@string/title_per"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".ClimaActivity"
-            android:label="@string/title_clima"
-            android:parentActivityName=".MainActivity" />
     </application>
 </manifest>

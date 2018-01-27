@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.contenedor, new NoticiasFragment()).commit();
+        fragmentManager.beginTransaction().replace(R.id.contenedor, new PerfilFragment()).commit();
     }
 
     @Override
@@ -53,15 +53,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
 
         if (id == R.id.nav_perfil) {
-            Intent per = new Intent(MainActivity.this, Perfil_List.class);
-            startActivity(per);
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new PerfilFragment()).commit();
         } else if (id == R.id.nav_noticias) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new NoticiasFragment()).commit();
         } else if (id == R.id.nav_negocios) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new NegociosFragment()).commit();
         } else if (id == R.id.nav_promociones) {
-            Intent promo = new Intent(MainActivity.this, Lugares_List.class);
-            startActivity(promo);
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new PromocionesFragment()).commit();
         } else if (id == R.id.nav_pagos) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new PagosFragment()).commit();
         } else if (id == R.id.nav_acerca) {
@@ -70,8 +68,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent ruleta = new Intent(MainActivity.this, RuletaActivity.class);
             startActivity(ruleta);
         } else if (id == R.id.nav_clima){
-            Intent clima = new Intent(MainActivity.this, ClimaActivity.class);
-            startActivity(clima);
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new ClimaFragment()).commit();
         } else if (id == R.id.nav_share){
             //Sustituir el link más adelante por la app real :v
             String appLink = "https://play.google.com/store/apps/details?id=com.Slack&hl=es";

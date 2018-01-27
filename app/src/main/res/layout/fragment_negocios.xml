@@ -13,5 +13,4 @@
         android:textAlignment="center"
         android:textSize="42sp"
         android:textStyle="bold" />
-
 </FrameLayout>
