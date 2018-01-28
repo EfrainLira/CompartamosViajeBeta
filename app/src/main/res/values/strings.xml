@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Compartamos Viaje</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
@@ -32,7 +31,7 @@
     <!--Strings for Perfil-->
     <string name="name">Helena López</string>
     <string name="address">Condesa #298</string>
-    <string name="from">CDMX</string>
+    <string name="from">Ciudad de México</string>
     <string name="compras">Mis compras</string>
 
     <!--Strings for Acerca De-->

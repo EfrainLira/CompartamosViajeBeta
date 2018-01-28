@@ -1,5 +1,6 @@
 package com.ganlen.compartamosviaje;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -23,15 +24,16 @@ public class Tab_ProductosFragment extends Fragment {
     private ProgressDialog progressDialog;
     private DatabaseReference databaseReference;
     public static final String FB_Database_Path = "productos";
+    ProgressDialog dialog;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         View view = inflater.inflate(R.layout.fragment_tab_productos, container, false);
-
         final ArrayList imgList = new ArrayList<>();
         lv = (ListView) view.findViewById(R.id.listViewImage);
-        final ProgressDialog dialog = ProgressDialog.show(getActivity(), "Por favor espera", "Cargando promociones...",true);
+        dialog = ProgressDialog.show(getActivity(), "Por favor espera", "Cargando promociones...",true);
         mDatabaseRef = FirebaseDatabase.getInstance().getReference(FB_Database_Path);
         mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override

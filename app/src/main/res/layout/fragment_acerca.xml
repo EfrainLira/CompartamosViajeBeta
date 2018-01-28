@@ -1,4 +1,5 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark">
@@ -17,6 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="49dp"
             android:src="@drawable/ic_separador2"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,9 +26,9 @@
             android:scaleType="centerInside"
             android:text="@string/obj_title"
             android:textAlignment="center"
-            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
             android:textSize="24sp"
-            android:textColor="@color/colorPrimary"/>
+            android:textStyle="bold" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,6 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="49dp"
             android:src="@drawable/ic_separador2"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,9 +52,9 @@
             android:scaleType="centerInside"
             android:text="@string/team_title"
             android:textAlignment="center"
-            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
             android:textSize="24sp"
-            android:textColor="@color/colorPrimary"/>
+            android:textStyle="bold" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -147,7 +150,7 @@
             android:textAlignment="center"
             android:textStyle="bold"
             android:textSize="24sp"
-            android:textColor="@color/colorPrimary"/>
+            android:textColor="@color/colorAccent"/>
 
         <TextView
             android:id="@+id/website_text_view"
@@ -157,8 +160,8 @@
             android:layout_marginBottom="8dp"
             android:autoLink="web"
             android:text="@string/website"
-            android:textColor="@android:color/black"
-            android:textColorLink="@android:color/holo_blue_light"
+            android:textColor="@color/colorBlanco"
+            android:textColorLink="@android:color/holo_blue_bright"
             android:textSize="16sp"
             android:textStyle="bold" />
         <ImageView

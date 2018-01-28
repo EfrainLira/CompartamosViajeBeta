@@ -1,5 +1,10 @@
 package com.ganlen.compartamosviaje;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.pm.ActivityInfo;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -7,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.app.ProgressDialog;
 import android.widget.ListView;
+import android.widget.Toast;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -23,32 +29,32 @@ public class Tab_LugaresFragment extends Fragment {
     private ProgressDialog progressDialog;
     private DatabaseReference databaseReference;
     public static final String FB_Database_Path = "lugares";
+    ProgressDialog dialog;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         View view = inflater.inflate(R.layout.fragment_tab_lugares, container, false);
-
-        final ArrayList imgList = new ArrayList<>();
-        lv = (ListView) view.findViewById(R.id.listViewImage);
-        final ProgressDialog dialog = ProgressDialog.show(getActivity(), "Por favor espera", "Cargando promociones...",true);
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference(FB_Database_Path);
-        mDatabaseRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                dialog.dismiss();
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    Upload_Promocion img = snapshot.getValue(Upload_Promocion.class);
-                    imgList.add(img);
+            final ArrayList imgList = new ArrayList<>();
+            lv = (ListView) view.findViewById(R.id.listViewImage);
+            dialog = ProgressDialog.show(getActivity(), "Por favor espera", "Cargando promociones...",true);
+            dialog.setCanceledOnTouchOutside(true);
+            mDatabaseRef = FirebaseDatabase.getInstance().getReference(FB_Database_Path);
+            mDatabaseRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    dialog.dismiss();
+                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                        Upload_Promocion img = snapshot.getValue(Upload_Promocion.class);
+                        imgList.add(img);
+                    }
+                    adapter = new ListAdapter_Promocion(getActivity(), R.layout.activity_item, imgList);
+                    lv.setAdapter(adapter);
                 }
-                adapter = new ListAdapter_Promocion(getActivity(), R.layout.activity_item, imgList);
-                lv.setAdapter(adapter);
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                dialog.dismiss();
-            }
-        });
+                @Override
+                public void onCancelled(DatabaseError databaseError) {  dialog.dismiss();   }
+            });
         return view;
     }
 }
