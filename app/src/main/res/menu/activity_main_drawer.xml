@@ -26,7 +26,7 @@
             android:title="@string/explorar" />
         <item
             android:id="@+id/nav_promociones"
-            android:icon="@drawable/ic_money"
+            android:icon="@drawable/ic_promo"
             android:title="@string/promociones" />
         <item
             android:id="@+id/nav_ruleta"
