@@ -14,12 +14,12 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class ListAdapter_Promocion extends ArrayAdapter<Upload_Promocion> {
+public class AdapterList extends ArrayAdapter<UploadList> {
     private Activity context;
     private int resource;
-    private List<Upload_Promocion> listImage;
+    private List<UploadList> listImage;
 
-    public ListAdapter_Promocion(@NonNull Activity context, @LayoutRes int resource, @NonNull List<Upload_Promocion> objects) {
+    public AdapterList(@NonNull Activity context, @LayoutRes int resource, @NonNull List<UploadList> objects) {
         super(context, resource, objects);
         this.context = context;
         this.resource = resource;

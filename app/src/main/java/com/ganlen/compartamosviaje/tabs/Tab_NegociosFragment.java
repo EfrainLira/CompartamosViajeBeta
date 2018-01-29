@@ -1,49 +1,54 @@
-package com.ganlen.compartamosviaje;
+package com.ganlen.compartamosviaje.tabs;
 
+import android.app.ProgressDialog;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.app.ProgressDialog;
 import android.widget.ListView;
+
+import com.ganlen.compartamosviaje.AdapterList;
+import com.ganlen.compartamosviaje.R;
+import com.ganlen.compartamosviaje.UploadList;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Tab_ServiciosFragment extends Fragment {
+public class Tab_NegociosFragment extends Fragment {
     private DatabaseReference mDatabaseRef;
-    private List<Upload_Promocion> imgList;
+    private List<UploadList> imgList;
     private ListView lv;
-    private ListAdapter_Promocion adapter;
+    private AdapterList adapter;
     private ProgressDialog progressDialog;
     private DatabaseReference databaseReference;
-    public static final String FB_Database_Path = "servicios";
+    public static final String FB_Database_Path = "negocios";
     ProgressDialog dialog;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        View view = inflater.inflate(R.layout.fragment_tab_servicios, container, false);
+        View view = inflater.inflate(R.layout.fragment_tab_negocios, container, false);
         final ArrayList imgList = new ArrayList<>();
         lv = (ListView) view.findViewById(R.id.listViewImage);
-        dialog = ProgressDialog.show(getActivity(), "Por favor espera", "Cargando promociones...",true);
+        dialog = ProgressDialog.show(getActivity(), "Por favor espera", "Cargando negocios...",true);
         mDatabaseRef = FirebaseDatabase.getInstance().getReference(FB_Database_Path);
         mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 dialog.dismiss();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    Upload_Promocion img = snapshot.getValue(Upload_Promocion.class);
+                    UploadList img = snapshot.getValue(UploadList.class);
                     imgList.add(img);
                 }
-                adapter = new ListAdapter_Promocion(getActivity(), R.layout.activity_item, imgList);
+                adapter = new AdapterList(getActivity(), R.layout.activity_item, imgList);
                 lv.setAdapter(adapter);
             }
             @Override

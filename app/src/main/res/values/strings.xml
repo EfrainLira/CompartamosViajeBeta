@@ -6,16 +6,11 @@
 
     <!--Strings for Manifest-->
     <string name="title_ruleta">Ruleta</string>
-    <string name="title_lugares">Lugares</string>
-    <string name="title_productos">Productos</string>
-    <string name="title_servicios">Servicios</string>
-    <string name="title_per">Perfil</string>
-    <string name="title_clima">Clima</string>
 
     <!--Strings for MainDrawer-->
     <string name="perfil">Mi Perfil</string>
     <string name="noti">Noticias</string>
-    <string name="negocios">Negocios</string>
+    <string name="explorar">Explorar</string>
     <string name="promociones">Promociones</string>
     <string name="pagos">Pagos</string>
     <string name="ruleta">Ruleta</string>
@@ -23,6 +18,7 @@
     <string name="acerca">Acerca De</string>
     <string name="cerrar">Cerrar Sesión</string>
     <string name="clima">Clima</string>
+    <string name="descubrir">Descubre</string>
 
     <!--Strings for Nav_Header_Main-->
     <string name="saludo">Bienvenido</string>

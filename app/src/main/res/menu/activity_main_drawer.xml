@@ -17,17 +17,17 @@
             android:icon="@drawable/ic_news"
             android:title="@string/noti" />
         <item
-            android:id="@+id/nav_negocios"
-            android:icon="@drawable/ic_negocio"
-            android:title="@string/negocios" />
+            android:id="@+id/nav_descubrir"
+            android:icon="@drawable/ic_explorar"
+            android:title="@string/descubrir" />
+        <item
+            android:id="@+id/nav_explorar"
+            android:icon="@drawable/ic_maps"
+            android:title="@string/explorar" />
         <item
             android:id="@+id/nav_promociones"
             android:icon="@drawable/ic_money"
             android:title="@string/promociones" />
-        <item
-            android:id="@+id/nav_pagos"
-            android:icon="@drawable/ic_pago"
-            android:title="@string/pagos" />
         <item
             android:id="@+id/nav_ruleta"
             android:icon="@drawable/ic_ruleta"

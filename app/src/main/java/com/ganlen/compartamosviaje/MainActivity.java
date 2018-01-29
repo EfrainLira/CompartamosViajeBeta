@@ -56,12 +56,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentManager.beginTransaction().replace(R.id.contenedor, new PerfilFragment()).commit();
         } else if (id == R.id.nav_noticias) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new NoticiasFragment()).commit();
-        } else if (id == R.id.nav_negocios) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor, new NegociosFragment()).commit();
+        } else if (id == R.id.nav_explorar) {
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new ExplorarFragment()).commit();
         } else if (id == R.id.nav_promociones) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new PromocionesFragment()).commit();
-        } else if (id == R.id.nav_pagos) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor, new PagosFragment()).commit();
         } else if (id == R.id.nav_acerca) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new AcercaDeFragment()).commit();
         } else if (id == R.id.nav_ruleta){
@@ -69,6 +67,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(ruleta);
         } else if (id == R.id.nav_clima){
             fragmentManager.beginTransaction().replace(R.id.contenedor, new ClimaFragment()).commit();
+        } else if (id == R.id.nav_descubrir){
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new DescubrirFragment()).commit();
         } else if (id == R.id.nav_share){
             //Sustituir el link más adelante por la app real :v
             String appLink = "https://play.google.com/store/apps/details?id=com.Slack&hl=es";
