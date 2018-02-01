@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.app.ProgressDialog;
 import android.widget.ListView;
-
 import com.ganlen.compartamosviaje.AdapterList;
 import com.ganlen.compartamosviaje.R;
 import com.ganlen.compartamosviaje.UploadList;
@@ -18,15 +17,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Tab_DestinosFragment extends Fragment {
     private DatabaseReference mDatabaseRef;
-    private List<UploadList> imgList;
     private ListView lv;
     private AdapterList adapter;
-    private ProgressDialog progressDialog;
-    private DatabaseReference databaseReference;
     public static final String FB_Database_Path = "destinos";
     ProgressDialog dialog;
 
@@ -34,9 +29,9 @@ public class Tab_DestinosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        View view = inflater.inflate(R.layout.fragment_tab_destinos, container, false);
+        View view = inflater.inflate(R.layout.fragment_tab, container, false);
         final ArrayList imgList = new ArrayList<>();
-        lv = (ListView) view.findViewById(R.id.listViewImage);
+        lv = view.findViewById(R.id.listViewImage);
         dialog = ProgressDialog.show(getActivity(), "Por favor espera", "Cargando destinos...",true);
         mDatabaseRef = FirebaseDatabase.getInstance().getReference(FB_Database_Path);
         mDatabaseRef.addValueEventListener(new ValueEventListener() {

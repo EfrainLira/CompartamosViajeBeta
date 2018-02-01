@@ -11,7 +11,6 @@ import android.text.Html;
 import android.widget.TextView;
 
 public class ClimaFragment extends Fragment {
-
     TextView cityField, detailsField, currentTemperatureField, humidity_field, pressure_field, weatherIcon, updatedField;
     Typeface weatherFont;
 
@@ -21,13 +20,13 @@ public class ClimaFragment extends Fragment {
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         View view = inflater.inflate(R.layout.fragment_clima, container, false);
         weatherFont = Typeface.createFromAsset(getActivity().getApplicationContext().getAssets(), "fonts/weathericons-regular-webfont.ttf");
-        cityField = (TextView) view.findViewById(R.id.city_field);
-        updatedField = (TextView) view.findViewById(R.id.updated_field);
-        detailsField = (TextView) view.findViewById(R.id.details_field);
-        currentTemperatureField = (TextView) view.findViewById(R.id.current_temperature_field);
-        humidity_field = (TextView) view.findViewById(R.id.humidity_field);
-        pressure_field = (TextView) view.findViewById(R.id.pressure_field);
-        weatherIcon = (TextView) view.findViewById(R.id.weather_icon);
+        cityField = view.findViewById(R.id.city_field);
+        updatedField = view.findViewById(R.id.updated_field);
+        detailsField = view.findViewById(R.id.details_field);
+        currentTemperatureField = view.findViewById(R.id.current_temperature_field);
+        humidity_field = view.findViewById(R.id.humidity_field);
+        pressure_field = view.findViewById(R.id.pressure_field);
+        weatherIcon = view.findViewById(R.id.weather_icon);
         weatherIcon.setTypeface(weatherFont);
 
         FunctionClima.placeIdTask asyncTask =new FunctionClima.placeIdTask(new FunctionClima.AsyncResponse() {
@@ -41,7 +40,7 @@ public class ClimaFragment extends Fragment {
                 weatherIcon.setText(Html.fromHtml(weather_iconText));
             }
         });
-        asyncTask.execute("19.432807", "-99.134623"); //Definir manual("Latitude", "Longitude")
+        asyncTask.execute("19.432807", "-99.134623"); //Definir de forma manual("Latitude", "Longitude")
         return view;
     }
 }

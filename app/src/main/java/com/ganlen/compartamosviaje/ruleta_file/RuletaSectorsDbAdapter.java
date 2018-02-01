@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 public class RuletaSectorsDbAdapter {
-
     public static final String KEY_BODY = "body";
     public static final String KEY_ROWID = "_id";
     private static final String TAG = "RuletaSectorsDbAdapter";
@@ -18,10 +17,9 @@ public class RuletaSectorsDbAdapter {
     private static final String DATABASE_CREATE =
         "create table sectors (_id integer primary key autoincrement, "
         + "body text not null);";
-
     private static final String DATABASE_NAME = "fortunewheeldatabase";
     private static final String DATABASE_TABLE = "sectors";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     private final Context mCtx;
 
     private static class DatabaseHelper extends SQLiteOpenHelper {
@@ -47,34 +45,16 @@ public class RuletaSectorsDbAdapter {
         return this;
     }
 
-    public void close() { mDbHelper.close(); }
-
     public long createSector(String body) {
         ContentValues initialValues = new ContentValues();
         initialValues.put(KEY_BODY, body);
         return mDb.insert(DATABASE_TABLE, null, initialValues);
     }
 
-    public boolean deleteSector(long rowId) { return mDb.delete(DATABASE_TABLE, KEY_ROWID + "=" + rowId, null) > 0; }
-    
 	public void deleteAll(){ mDb.delete(DATABASE_TABLE, null, null); }
 
     public Cursor fetchAllSectors() {
         return mDb.query(DATABASE_TABLE, new String[] {KEY_ROWID,
                 KEY_BODY}, null, null, null, null, null);
-    }
-
-    public Cursor fetchSector(long rowId) throws SQLException {
-        Cursor mCursor = mDb.query(true, DATABASE_TABLE, new String[] {KEY_ROWID,
-                    KEY_BODY}, KEY_ROWID + "=" + rowId, null,
-                    null, null, null, null);
-        if (mCursor != null) { mCursor.moveToFirst(); }
-        return mCursor;
-    }
-
-    public boolean updateSector(long rowId, String body) {
-        ContentValues args = new ContentValues();
-        args.put(KEY_BODY, body);
-        return mDb.update(DATABASE_TABLE, args, KEY_ROWID + "=" + rowId, null) > 0;
     }
 }

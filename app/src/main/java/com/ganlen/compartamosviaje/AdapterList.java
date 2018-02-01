@@ -11,7 +11,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
-
 import java.util.List;
 
 public class AdapterList extends ArrayAdapter<UploadList> {
@@ -30,10 +29,9 @@ public class AdapterList extends ArrayAdapter<UploadList> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
-
         View v = inflater.inflate(resource, null);
-        TextView tvName = (TextView) v.findViewById(R.id.tvImageName);
-        ImageView img = (ImageView) v.findViewById(R.id.imgView);
+        TextView tvName = v.findViewById(R.id.tvImageName);
+        ImageView img = v.findViewById(R.id.imgView);
         tvName.setText(listImage.get(position).getName());
         Glide.with(context).load(listImage.get(position).getUrl()).into(img);
         return v;

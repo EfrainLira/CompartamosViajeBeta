@@ -2,7 +2,6 @@ package com.ganlen.compartamosviaje.ruleta_file;
 
 import android.content.Context;
 import android.database.Cursor;
-
 import java.util.Random;
 
 public class RuletaInitialization {

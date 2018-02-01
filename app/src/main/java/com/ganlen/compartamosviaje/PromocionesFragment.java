@@ -15,7 +15,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
 import com.ganlen.compartamosviaje.tabs.Tab_HotelesFragment;
 import com.ganlen.compartamosviaje.tabs.Tab_NegociosFragment;
 import com.ganlen.compartamosviaje.tabs.Tab_ProductosFragment;
@@ -30,12 +29,11 @@ public class PromocionesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        View view = inflater.inflate(R.layout.fragment_promociones, container, false);
+        View view = inflater.inflate(R.layout.fragment_menu_tabs, container, false);
         View contenedor = (View) container.getParent();
-        appBar = (AppBarLayout) contenedor.findViewById(R.id.appbar);
+        appBar = contenedor.findViewById(R.id.appbar);
         tabs = new TabLayout(getActivity());
         tabs.setTabTextColors(Color.parseColor("#ffffff"), Color.parseColor("#9fffe0"));
-
         ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
         android.net.NetworkInfo wifi = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
         android.net.NetworkInfo datac = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
@@ -46,12 +44,10 @@ public class PromocionesFragment extends Fragment {
             ViewPagerAdapter pagerAdapter = new ViewPagerAdapter(getFragmentManager());
             viewPager.setAdapter(pagerAdapter);
             tabs.setupWithViewPager(viewPager);
-
         }else{
             //No hay conexión
             Toast.makeText(getActivity().getApplicationContext(), "No hay conexión a Internet", Toast.LENGTH_LONG).show();
         }
-
         return view;
     }
 

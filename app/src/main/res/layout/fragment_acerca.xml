@@ -1,5 +1,5 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark">
@@ -7,178 +7,168 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <ImageView
-            android:layout_marginTop="50dp"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:scaleType="centerInside"
-            android:src="@drawable/logo_ganlen"/>
-        <ImageView
+    <ImageView
+    android:layout_marginTop="50dp"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:layout_gravity="center"
+    android:scaleType="centerInside"
+    android:src="@drawable/logo_ganlen"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:src="@drawable/ic_separador2"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:text="@string/obj_title"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/obj_text"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlanco"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:src="@drawable/ic_separador2"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:text="@string/team_title"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="49dp"
-            android:src="@drawable/ic_separador2"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:scaleType="centerInside"
-            android:text="@string/obj_title"
-            android:textAlignment="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/obj_text"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:textColor="@color/colorBlanco"
-            android:background="@color/colorPrimaryDark"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="49dp"
-            android:src="@drawable/ic_separador2"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:scaleType="centerInside"
-            android:text="@string/team_title"
+            android:layout_marginRight="30dp"
+            android:text="@string/raul"
             android:textAlignment="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="30dp"
-                android:text="@string/raul"
-                android:textAlignment="center"
-                android:textColor="@color/colorBlanco"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginRight="30dp"
-                android:text="@string/david"
-                android:textAlignment="center"
-                android:textColor="@color/colorBlanco"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginRight="10dp"
-                android:text="@string/efrain"
-                android:textAlignment="center"
-                android:textColor="@color/colorBlanco"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="20dp"
-                android:text="@string/fernando"
-                android:textAlignment="center"
-                android:textColor="@color/colorBlanco"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
-                android:layout_marginRight="20dp"
-                android:text="@string/dulce"
-                android:textAlignment="center"
-                android:textColor="@color/colorBlanco"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
-                android:layout_marginRight="10dp"
-                android:text="@string/bryan"
-                android:textAlignment="center"
-                android:textColor="@color/colorBlanco"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="49dp"
-            android:src="@drawable/ic_separador2"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:scaleType="centerInside"
-            android:text="@string/web_title"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:textSize="24sp"
-            android:textColor="@color/colorAccent"/>
-
-        <TextView
-            android:id="@+id/website_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="8dp"
-            android:autoLink="web"
-            android:text="@string/website"
             android:textColor="@color/colorBlanco"
-            android:textColorLink="@android:color/holo_blue_bright"
             android:textSize="16sp"
             android:textStyle="bold" />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="49dp"
-            android:src="@drawable/ic_separador2"/>
-
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/copyright"
+            android:layout_marginRight="30dp"
+            android:text="@string/david"
             android:textAlignment="center"
             android:textColor="@color/colorBlanco"
-            android:textSize="12sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:text="@string/efrain"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlanco"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/fernando"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlanco"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/dulce"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlanco"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/bryan"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlanco"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:src="@drawable/ic_separador2"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:text="@string/web_title"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/colorAccent"/>
+    <TextView
+        android:id="@+id/website_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:autoLink="web"
+        android:text="@string/website"
+        android:textColor="@color/colorBlanco"
+        android:textColorLink="@android:color/holo_blue_bright"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:src="@drawable/ic_separador2"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/copyright"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlanco"
+        android:textSize="12sp"
+        android:textStyle="bold" />
     </LinearLayout>
 </ScrollView>
