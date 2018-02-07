@@ -58,4 +58,15 @@
         <item>Para 2 o 4 entrada, principal, postre y botella de vino</item>
         <item>Steakburgers dobles para 2 personas con patatas fritas</item>
     </string-array>
+    <string name="password">Contraseña</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="ingresar">Ingresar</string>hint_correo
+    <string name="hint_correo">Correo Electrónico</string>
+    <string name="Recuperar">Recuperar Contraseña</string>
+
+    Recuperar Contraseña
+
+
+
+
 </resources>
