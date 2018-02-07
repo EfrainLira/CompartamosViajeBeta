@@ -8,56 +8,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:495936856633:android:5085a84c04b59f10",
-        "android_client_info": {
-          "package_name": "ganlensystems.icloud.com.compartamos_viaje"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "495936856633-i3o2ji58qgmpr3okrk4tve78tu6j5mae.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "ganlensystems.icloud.com.compartamos_viaje",
-            "certificate_hash": "f7b7971ee851d266aa7189e75fa4de69647a4d45"
-          }
-        },
-        {
-          "client_id": "495936856633-aob96b74onc3ir3hd997brkifevot8s4.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCjVyKHNzSjVy2ZlhxvVHAmXtwhCLm6hYw"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "495936856633-aob96b74onc3ir3hd997brkifevot8s4.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:495936856633:android:a87c1eb678d0f3a7",
         "android_client_info": {
           "package_name": "com.ganlen.compartamosviaje"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "495936856633-pdtjqdape4pfkqgfc7utjrjgn6f5ibp4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ganlen.compartamosviaje",
+            "certificate_hash": "719858bc41ec061fdc9d8a4dbeac9850127110eb"
+          }
+        },
         {
           "client_id": "495936856633-9mi1at9qcjp38desr0tajh3miucbd38d.apps.googleusercontent.com",
           "client_type": 1,
