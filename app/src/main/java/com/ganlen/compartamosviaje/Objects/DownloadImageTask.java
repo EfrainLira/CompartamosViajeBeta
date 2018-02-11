@@ -5,12 +5,7 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.ImageView;
-
 import java.io.InputStream;
-
-/**
- * Created by drewermerc on 30/12/17.
- */
 
 public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
     ImageView bmImage;

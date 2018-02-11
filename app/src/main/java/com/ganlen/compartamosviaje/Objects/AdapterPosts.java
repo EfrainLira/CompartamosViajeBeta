@@ -7,21 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-
 import com.ganlen.compartamosviaje.R;
-
 import java.util.List;
-
-
-/**
- * Created by drewermerc on 30/12/17.
- */
 
 public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.ViewHolderPosts> {
 
     List<Posts> ListPosts;
-
     public AdapterPosts(List<Posts> listPosts) {
         ListPosts = listPosts;
     }
@@ -51,7 +42,6 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.ViewHolderPo
         super.onAttachedToRecyclerView(recyclerView);
     }
 
-
     public void clear() {
         int size = this.ListPosts.size();
         this.ListPosts.clear();
@@ -68,6 +58,5 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.ViewHolderPo
             postDescription = (TextView) itemView.findViewById(R.id.post_description);
             postImage = (ImageView) itemView.findViewById(R.id.post_image);
         }
-
     }
 }

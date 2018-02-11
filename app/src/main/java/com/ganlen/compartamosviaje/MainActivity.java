@@ -15,7 +15,6 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.MenuItem;
 import com.ganlen.compartamosviaje.ruleta_file.RuletaActivity;
-
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -71,8 +70,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_descubrir){
             fragmentManager.beginTransaction().replace(R.id.contenedor, new DescubrirFragment()).commit();
         } else if (id == R.id.nav_share){
-            //Sustituir el link más adelante por la app real :v
-            String appLink = "https://play.google.com/store/apps/details?id=com.icloud.ganlensystems.pumitaschool&hl=es";
+            String appLink = "https://play.google.com/store/apps/details?id=com.ganlen.compartamosviaje&hl=es";
             Intent share = new Intent(Intent.ACTION_SEND);
             share.setType("text/plain");
             share.putExtra(Intent.EXTRA_SUBJECT, "Compartamos Viaje");

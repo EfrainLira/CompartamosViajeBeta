@@ -1,9 +1,5 @@
 package com.ganlen.compartamosviaje.Objects;
 
-/**
- * Created by drewermerc on 30/12/17.
- */
-
 public class Posts {
     private String message;
     private String full_picture;

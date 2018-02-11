@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ganlen.compartamosviaje.PerfilFragment">
+    tools:context="com.ganlen.compartamosviaje.PerfilFragment"
+    android:layout_marginTop="55dp">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,7 +17,6 @@
             tools:context="com.example.android.sdkfb.LoginActivity"
             android:orientation="vertical">
 
-
             <android.support.v7.widget.RecyclerView
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/recycler_posts"
@@ -29,12 +29,6 @@
                 android:id="@+id/post"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-
         </LinearLayout>
     </ScrollView>
-
-
 </FrameLayout>
-
-
-
