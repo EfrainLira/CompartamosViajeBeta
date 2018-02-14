@@ -128,7 +128,7 @@ public class RuletaView extends SurfaceView implements SurfaceHolder.Callback {
 		case MotionEvent.ACTION_DOWN:
 				mLastPointAngle = getAngle(currentPoint);
 				mAngleDiff = 0;
-				Log.v("MotionEvent", "Action = ACTION_DOWN " + mLastPointAngle);
+				//Log.v("MotionEvent", "Action = ACTION_DOWN " + mLastPointAngle);
 			break;
 		}
 		return true;
