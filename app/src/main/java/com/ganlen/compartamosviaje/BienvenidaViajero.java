@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,7 +22,7 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
 public class BienvenidaViajero extends AppCompatActivity {
-      private TextInputLayout loginviajero_email, loginviajero_password;
+      private EditText loginviajero_email, loginviajero_password;
       private Button btn_IngresarViajero;
       private FirebaseAuth firebaseAuth;
 
@@ -38,11 +39,24 @@ public class BienvenidaViajero extends AppCompatActivity {
 
     }
 
-/*
+
     public void IngresarViajero (View v) {
+        String email = loginviajero_email.getText().toString().trim();
+        String password = loginviajero_password.getText().toString().trim();
+
+        if (TextUtils.isEmpty(email)) {
+            loginviajero_email.setError("Este campo no puede estar vacío");
+            return;
+
+        }
+        if (TextUtils.isEmpty(password)) {
+            loginviajero_password.setError("Este campo no puede estar vacío");
+            return;
+
+        }
         final ProgressDialog progressDialog = ProgressDialog.show(BienvenidaViajero.this, "Por favor espera", "Procesando...", true);
 
-        (firebaseAuth.signInWithEmailAndPassword(loginviajero_email.getText().toString(), txtpwdAlumno.getText().toString()))
+        (firebaseAuth.signInWithEmailAndPassword(loginviajero_email.getText().toString(), loginviajero_password.getText().toString()))
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
                     @Override
@@ -55,10 +69,7 @@ public class BienvenidaViajero extends AppCompatActivity {
                             Intent i = new Intent(BienvenidaViajero.this, MainActivity.class);
                             i.putExtra("Email", firebaseAuth.getCurrentUser().getEmail());
                             startActivity(i);
-                        }
-
-
-                        else {
+                        } else {
 
                             String error = "";
 
@@ -83,15 +94,11 @@ public class BienvenidaViajero extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), error, Toast.LENGTH_LONG).show();
 
 
-
                         }
 
                     }
 
 
-
-
-
                 });
-                */
+    }
 }
