@@ -1,6 +1,9 @@
 package com.ganlen.compartamosviaje.ruleta_file;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Canvas;
@@ -204,8 +207,19 @@ public class RuletaView extends SurfaceView implements SurfaceHolder.Callback {
 			//text = ("Vamos, gira un poco más fuerte");
 			text = ("");
 		}
-		Toast toast = Toast.makeText(mContext, text, Toast.LENGTH_SHORT);
-		toast.show();
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+		builder.setTitle("Promo del Día");
+		builder.setMessage(text);
+		builder.setPositiveButton("Canjear", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialogInterface, int i) {
+				Toast.makeText(mContext, "", Toast.LENGTH_SHORT).show();
+			}
+		});
+		builder.setNegativeButton("Volver a girar", null);
+		Dialog dialog = builder.create();
+		dialog.show();
 	}
 
 	public int getCurrentSector() {

@@ -26,7 +26,7 @@ public class PerfilFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        View view = inflater.inflate(R.layout.fragment_perfil, container, false);
+        View view = inflater.inflate(R.layout.fragment_compras, container, false);
         final ArrayList imgList = new ArrayList<>();
         lv = view.findViewById(R.id.listViewImage);
         dialog = ProgressDialog.show(getActivity(), "Por favor espera", "Cargando compras...",true);

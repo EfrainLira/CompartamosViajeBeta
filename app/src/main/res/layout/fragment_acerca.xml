@@ -111,17 +111,6 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginBottom="8dp"
-            android:layout_marginRight="20dp"
-            android:text="@string/dulce"
-            android:textAlignment="center"
-            android:textColor="@color/colorBlanco"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginBottom="8dp"
             android:layout_marginRight="10dp"
             android:text="@string/bryan"
             android:textAlignment="center"
